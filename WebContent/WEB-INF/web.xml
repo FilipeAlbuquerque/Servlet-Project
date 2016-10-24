@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Trabalho001</display-name>
+	<servlet>
+		<description></description>
+		<display-name>Login</display-name>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>nassau.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Perfil</display-name>
+		<servlet-name>Perfil</servlet-name>
+		<servlet-class>nassau.Perfil</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Perfil</servlet-name>
+		<url-pattern>/Perfil</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Logout</display-name>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>nassau.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+
+		<servlet-name>App</servlet-name>
+		<servlet-class>nassau.App</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>App</servlet-name>
+		<url-pattern>/App</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>nassau.ContadorSessao</listener-class>
+	</listener>
+	<listener>
+		<listener-class>nassau.AtributoListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>nassau.SessionListener</listener-class>
+	</listener>
+	<session-config>
+		<session-timeout>1</session-timeout>
+	</session-config>
+</web-app>
+

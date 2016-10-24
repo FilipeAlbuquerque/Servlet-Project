@@ -27,12 +27,13 @@ public class Login extends HttpServlet {
 			out.println("Bem-vindo, " + name + " .");
 			HttpSession session = request.getSession();
 			session.setAttribute("name", name);
+			
 			session.getLastAccessedTime();
 			out.println(" Seu último acesso foi em : " + ultimoAcesso.format(date));
 
 		} else {
 			out.println("Desculpe, usuário ou senha incorretos!");
-			request.getRequestDispatcher("login.html").include(request, response);
+			request.getRequestDispatcher("login.html").include(request, response);	
 
 		}
 		out.close();
